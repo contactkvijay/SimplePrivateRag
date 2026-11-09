@@ -1,0 +1,20 @@
+All records in this file are fictional examples.
+Name: Ravi Example
+Bank: Demo Maple Bank
+Account reference: DEMO-RAVI-MAPLE
+Branch address: 10 Example Road, Demo City
+---
+Name: Priya Example
+Bank: Demo Cedar Bank
+Account reference: DEMO-PRIYA-CEDAR
+Branch address: 20 Sample Street, Demo City
+---
+Project: Demo Billing Portal
+Environment: Development
+Database host: localhost
+Database port: 1540
+Database service: DEMO_DB
+---
+Project: Demo Billing Portal
+Owner: Tara Example
+Purpose: Practise searching fictional project notes

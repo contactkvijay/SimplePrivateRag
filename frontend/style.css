@@ -1,0 +1,60 @@
+:root {
+  --paper: #f5f5f5; --surface: #ffffff; --chat: #fafafa;
+  --ink: #263238; --muted: #737b80; --line: #dddddd;
+  --blue: #3389c5; --blue-hover: #2673a8; --green: #2f9e59;
+  --green-hover: #268149; --white: #ffffff; --user: #eaf4fc;
+  --pending: #b17b24; --ready: #28864b; --focus: #155f96;
+  --shadow: #00000012; --font: Arial, Helvetica, sans-serif;
+  font: 14px/1.5 var(--font);
+}
+* { box-sizing: border-box; }
+html, body { overflow-x: clip; }
+body { margin: 0; background: var(--paper); color: var(--ink); }
+button, textarea { font: inherit; }
+button, .upload-button { cursor: pointer; white-space: nowrap; }
+.shell { padding: 48px 16px; }
+.workspace { width: 100%; max-width: 680px; margin: auto; padding: 28px 26px 22px; background: var(--surface); border: 1px solid var(--line); border-radius: 9px; box-shadow: 0 2px 10px var(--shadow); }
+.heading { text-align: center; }
+.heading h1 { margin: 10px 0 24px; font-size: 26px; font-weight: 700; overflow-wrap: anywhere; }
+.heading h1 span { margin-right: 5px; }
+.status { display: flex; justify-content: center; align-items: center; gap: 7px; min-height: 36px; padding: 8px 12px; border-radius: 4px; background: var(--paper); font-size: 12px; text-align: center; }
+.status i { flex-shrink: 0; width: 9px; height: 9px; border-radius: 50%; background: var(--pending); }
+.status i.ok { background: var(--ready); }
+.tools { display: flex; align-items: center; gap: 10px; margin-top: 20px; }
+#upload-form { position: relative; }
+.upload-button, .quiet { display: inline-block; padding: 7px 12px; border: 1px solid var(--blue); border-radius: 4px; background: var(--blue); color: var(--white); font-size: 12px; }
+.upload-button:hover, .quiet:hover { background: var(--blue-hover); border-color: var(--blue-hover); }
+#file, .sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0, 0, 0, 0); }
+#upload-form:focus-within .upload-button, :focus-visible { outline: 2px solid var(--focus); outline-offset: 3px; }
+#upload-status { margin: 8px 0 14px; color: var(--muted); font-size: 12px; overflow-wrap: anywhere; }
+.conversation { height: 360px; overflow: auto; overscroll-behavior: contain; padding: 14px; border: 1px solid var(--line); border-radius: 4px; background: var(--chat); }
+.welcome { padding: 0 8px; text-align: center; color: var(--muted); font-size: 13px; }
+.message { margin-bottom: 12px; padding: 12px; border: 1px solid var(--line); border-radius: 5px; background: var(--surface); white-space: pre-wrap; overflow-wrap: anywhere; font-size: 14px; }
+.message.user { margin-left: 12%; background: var(--user); }
+.message .label { margin-bottom: 5px; color: var(--ink); font-size: 12px; font-weight: 700; }
+.sources { margin-top: 12px; padding-top: 9px; border-top: 1px solid var(--line); color: var(--muted); font-size: 12px; }
+.sources summary { cursor: pointer; color: var(--focus); white-space: normal; }
+.source { margin-top: 10px; padding: 10px; background: var(--paper); border-radius: 4px; }
+.composer { display: flex; align-items: flex-start; gap: 9px; margin-top: 16px; }
+.composer textarea { flex: 1; min-width: 0; width: 100%; min-height: 39px; max-height: 150px; padding: 9px 10px; resize: vertical; border: 1px solid var(--line); border-radius: 4px; background: var(--surface); color: var(--ink); font-size: 13px; }
+.composer button { min-height: 39px; padding: 8px 16px; border: 1px solid var(--green); border-radius: 4px; background: var(--green); color: var(--white); }
+.composer button:hover { background: var(--green-hover); }
+button:disabled { opacity: .55; cursor: wait; }
+button:active, .upload-button:active { transform: translateY(1px); }
+.keyboard-hint { margin: 5px 0 16px; color: var(--muted); font-size: 11px; }
+.library { padding-top: 13px; border-top: 1px solid var(--line); }
+.library-title { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.library h2 { margin: 0; font-size: 13px; font-weight: 600; }
+#doc-count { color: var(--muted); font-size: 12px; }
+.documents { margin: 6px 0 0; padding: 0; list-style: none; }
+.documents li { display: flex; align-items: center; gap: 10px; padding: 8px 0; border-bottom: 1px solid var(--line); font-size: 12px; }
+.documents li:last-child { border-bottom: 0; }
+.doc-name { flex: 1; min-width: 0; overflow-wrap: anywhere; }
+.delete { padding: 4px 6px; border: 0; background: none; color: var(--focus); }
+.delete:hover { text-decoration: underline; }
+@media (max-width: 600px) {
+  .shell { padding: 18px 10px; }
+  .workspace { padding: 18px 14px; }
+  .heading h1 { font-size: 23px; }
+  .conversation { height: 340px; }
+}

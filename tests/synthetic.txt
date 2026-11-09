@@ -1,0 +1,49 @@
+Name: Ravi
+Bank: HDFC
+Account number: DEMO-RAVI-HDFC
+IFSC: HDFC0000001
+Branch: Maple Road
+---
+Name: Priya
+Bank: HDFC
+Account number: DEMO-PRIYA-HDFC
+IFSC: HDFC0000002
+Branch: Cedar Avenue
+---
+Name: Ravi
+Bank: ICICI
+Account number: DEMO-RAVI-ICICI
+IFSC: ICIC0000003
+Branch: Oak Street
+---
+Name: Priya
+Bank: ICICI
+Account number: DEMO-PRIYA-ICICI
+IFSC: ICIC0000004
+Branch: Pine Lane
+---
+Project: Maple
+Moving date: 15 December
+Contact person: Anika
+---
+Project: Cedar
+Moving date: 20 January
+Contact person: Deepak
+---
+Topic: Annual leave
+Employees receive 24 days of paid holiday each year.
+---
+Topic: Travel expenses
+Submit receipts within 30 days to receive reimbursement.
+---
+Topic: Office entry
+Visitors must register at reception before entering the building.
+---
+Topic: Parking
+Bicycles can be left in the basement racks.
+---
+Topic: Remote work
+Staff may work from home on Fridays.
+---
+Topic: Technical support
+Report broken laptops to the help desk.

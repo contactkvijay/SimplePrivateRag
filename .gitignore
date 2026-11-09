@@ -1,0 +1,34 @@
+# Local documents, databases, credentials and working material
+/_private_archive/
+/local-data/
+/.artifacts/
+/.tmp/
+/.worktrees/
+/.venv/
+/article-assets/
+/BUILD_A_PRIVATE_RAG_WITH_OLLAMA.md
+/IMPLEMENTATION_PLAN.md
+/LINKEDIN_ARTICLE*.md
+/vijays_data.txt
+*.zip
+*.db
+*.db-*
+*.sqlite*
+*.log
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+.aws/
+.codex/
+.agents/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# TXT uploads are private by default; only these examples belong in Git
+*.txt
+!/requirements.txt
+!/sample.txt
+!/tests/synthetic.txt

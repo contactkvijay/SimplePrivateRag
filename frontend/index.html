@@ -1,0 +1,35 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f5f5">
+  <title>Simple Private RAG</title>
+  <link rel="stylesheet" href="./static/style.css">
+  <script src="./static/app.js" defer></script>
+</head>
+<body>
+  <main class="shell">
+    <section class="workspace" aria-label="Document chat">
+      <header class="heading"><h1><span aria-hidden="true">🤖</span> RAG Assistant</h1></header>
+      <div class="status" role="status"><i id="status-dot"></i><span id="status-text">Checking local models…</span></div>
+      <div class="tools">
+        <form id="upload-form">
+          <label class="upload-button" for="file">＋ Upload TXT file</label>
+          <input id="file" type="file" accept=".txt" aria-label="Upload TXT file" aria-describedby="upload-status">
+        </form>
+        <button id="clear-chat" class="quiet" type="button">Clear chat</button>
+      </div>
+      <p id="upload-status" role="status">TXT files · 8 MB max</p>
+      <div id="conversation" class="conversation" aria-live="polite"><div class="welcome">👋 Welcome! Upload a file, then ask questions about your documents.</div></div>
+      <form id="ask-form" class="composer">
+        <label class="sr-only" for="question">Your question</label>
+        <textarea id="question" rows="1" maxlength="2000" placeholder="Type your question here…" required></textarea>
+        <button type="submit">Ask</button>
+      </form>
+      <p class="keyboard-hint">Enter to ask · Shift+Enter for a new line</p>
+      <section class="library" aria-label="Uploaded documents"><div class="library-title"><h2>Your library</h2><span id="doc-count">0 files</span></div><ul id="documents" class="documents"></ul></section>
+    </section>
+  </main>
+</body>
+</html>
